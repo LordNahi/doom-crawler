@@ -3,12 +3,13 @@
     "target": "es5",
     "module": "es2015",
     "strict": true,
-    "typeRoots": ["./typings", "./node_modules/"],
+    "typeRoots": ["@types", "./node_modules/"],
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
       "~/*": ["src/*"],
-  }
+    },
   },
-  "include": ["src/**/*.ts", "typings/**/*.d.ts"],
+  "include": ["src/**/*.ts", "@types/**/*.d.ts"],
 }

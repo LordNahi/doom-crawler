@@ -1,24 +1,32 @@
 import "phaser";
+import PawnFactory from "~/objects/pawns/utils/pawnFactory";
 
-import phaserPng from "../assets/phaser.png";
+const ASSETS_PATH = "../src/assets/";
 
 export class MainScene extends Phaser.Scene {
-  private image!: Phaser.GameObjects.Image;
+  private pawnFactory!: PawnFactory;
 
   constructor() {
     super({ key: "MainScene" });
   }
 
   public preload() {
-    this.load.image("phaser", phaserPng);
+    this.load.setBaseURL(ASSETS_PATH);
+    this.load.atlas("player", "./player/player.png", "./player/player.json");
+    this.load.image("floor", "./floor/FLOOR4_6.png");
   }
 
   public create() {
-    this.image = this.add.image(400, 300, "phaser");
+    this.pawnFactory = new PawnFactory(this);
 
-    this.input.on("pointerdown", (event: any) => {
-      this.image.x = event.x;
-      this.image.y = event.y;
-    });
+    this.add.existing(this.pawnFactory);
+
+    const floor = this.add.image(0, 0, "floor");
+    floor.setOrigin(0);
+    floor.setScale(20);
+    floor.width = this.cameras.main.width;
+    floor.height = this.cameras.main.height;
+
+    this.pawnFactory.spawnDoomGuy(600, 300);
   }
 }
