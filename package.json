@@ -9,7 +9,7 @@
     "clean": "rimraf build dist",
     "download-phaser-typedef": "download --out typings https://raw.githubusercontent.com/photonstorm/phaser3-docs/master/typescript/phaser.d.ts",
     "build": "rimraf build && parcel build src/main.ts src/index.html --public-url ./ -d build --out-file=main --target=electron",
-    "watch": "rimraf build && parcel watch src/main.ts src/index.html --public-url ./ -d build --out-file=main --target=electron",
+    "build:watch": "rimraf build && parcel watch src/main.ts src/index.html --public-url ./ -d build --out-file=main --target=electron",
     "app": "cross-env electron build/main.js",
     "app:debug": "cross-env ELECTRON_DEBUG=true electron build/main.js",
     "debug": "cross-env ELECTRON_DEBUG=vscode electron --remote-debugging-port=9223 build/main.js",
@@ -31,8 +31,7 @@
   "author": "lordnahi",
   "license": "MIT",
   "dependencies": {
-    "eslint": "^8.22.0",
-    "phaser": "^3.54.0"
+    "phaser": "^3.55.2"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
@@ -40,6 +39,7 @@
     "electron": "^9.4.0",
     "electron-builder": "^22.10.5",
     "electron-reload": "^1.5.0",
+    "eslint": "^8.22.0",
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-static-files-copy": "^2.6.0",
     "rimraf": "^3.0.2",

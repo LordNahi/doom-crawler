@@ -11,6 +11,10 @@ const config: GameConfig = {
   scene: [MainScene],
   physics: {
     default: "arcade",
+    arcade: {
+      fps: 60,
+      gravity: { y: 0 },
+    },
   },
 };
 

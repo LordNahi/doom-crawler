@@ -12,7 +12,7 @@ export class MainScene extends Phaser.Scene {
 
   public preload() {
     this.load.setBaseURL(ASSETS_PATH);
-    this.load.atlas("player", "./player/player.png", "./player/player.json");
+    this.load.atlas("PLAY", "./player/player.png", "./player/player.json");
     this.load.image("floor", "./floor/FLOOR4_6.png");
   }
 
