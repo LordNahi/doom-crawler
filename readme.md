@@ -1,31 +1,9 @@
-# phaser-electron-typescript-parcel [![Build Status](https://travis-ci.org/distantcam/phaser-electron-typescript-parcel.svg?branch=master)](https://travis-ci.org/distantcam/phaser-electron-typescript-parcel)
-
 A minimal template with the following things.
 
 - [Phaser](https://phaser.io/) 🕹️ Desktop and Mobile HTML5 game framework
 - [Electron](https://electronjs.org/) ⚛️ Build cross platform desktop apps with JavaScript, HTML, and CSS
 - [Parcel](https://github.com/parcel-bundler/parcel) 📦 Blazing fast, zero configuration web application bundler
 - [TypeScript](https://www.typescriptlang.org/) ⌨️ is a typed superset of JavaScript that compiles to plain JavaScript.
-
-## Installation
-
-- `git@github.com:distantcam/phaser-electron-typescript-parcel.git`
-- `cd phaser-electron-typescript-parcel`
-- `yarn`
-
-## Usage
-
-### Cleaning
-
-Run these commands to clean up the directory
-
-```bash
-# Cleans up the build and dist folders
-yarn clean
-
-# Cleans up the builds, build cache, and node modules
-yarn superclean
-```
 
 ### Development mode
 
