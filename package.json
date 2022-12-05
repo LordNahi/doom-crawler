@@ -39,7 +39,7 @@
     "electron": "^9.4.0",
     "electron-builder": "^22.10.5",
     "electron-reload": "^1.5.0",
-    "eslint": "^8.22.0",
+    "eslint": "^8.29.0",
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-static-files-copy": "^2.6.0",
     "rimraf": "^3.0.2",
